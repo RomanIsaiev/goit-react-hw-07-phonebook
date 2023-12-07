@@ -15,8 +15,8 @@ const getVisibleContacts = (contacts, nameFilter) => {
 
 export const ContactsList = () => {
   const contacts = useSelector(getContacts);
-  const contactsFilter = useSelector(getFilter);
-  const visibleContacts = getVisibleContacts(contacts, contactsFilter);
+  const filter = useSelector(getFilter);
+  const visibleContacts = getVisibleContacts(contacts, filter);
   return (
     <ListWithContacts>
       {visibleContacts.map(contact => (

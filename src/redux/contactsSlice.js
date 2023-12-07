@@ -19,7 +19,6 @@ const contactsSlice = createSlice({
       { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
-    contactsFilter: '',
   },
   reducers: {
     addContact: {
@@ -42,9 +41,6 @@ const contactsSlice = createSlice({
       );
       state.contacts.splice(index, 1);
     },
-    contactsFilter(state, action) {
-      state.contactsFilter = action.payload;
-    },
   },
 });
 
@@ -53,6 +49,5 @@ export const persistedReducer = persistReducer(
   contactsSlice.reducer
 );
 
-export const { addContact, deleteContact, contactsFilter } =
-  contactsSlice.actions;
+export const { addContact, deleteContact } = contactsSlice.actions;
 export const contactsReducer = contactsSlice.reducer;
