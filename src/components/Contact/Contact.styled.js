@@ -5,6 +5,8 @@ export const ContactItem = styled.li`
   align-items: center;
   gap: 10px;
 
+  text-align: center;
+
   border: 1px solid black;
 
   padding: 10px 20px;
